@@ -4,4 +4,4 @@ my $mqtt = Net::MQTT::Simple::SSL->new("nyx.bjornhaug.net", {
     SSL_ca_file   => 'ca.crt'
 });
 
-$mqtt->publish("paradise" => "New message");
+$mqtt->publish("paradise/notify/test" => "New message");

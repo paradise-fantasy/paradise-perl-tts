@@ -15,7 +15,7 @@ my $mqtt = Net::MQTT::Simple::SSL->new("nyx.bjornhaug.net", {
 });
 
 $mqtt->run(
-  "paradise/notify" => sub {
+  "paradise/notify/#" => sub {
     my ($topic, $message) = @_;
     $ps->say("$message");
   }

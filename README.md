@@ -8,3 +8,4 @@ Knock knock, open up the door, it's real - With the non-stop, pop pop and stainl
 Required packages:
 - PerlSpeak
 - JSON::XS
+- Net::MQTT::Simple

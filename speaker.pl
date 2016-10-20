@@ -1,19 +1,18 @@
-# Several examples can be found in the example directory included with the
-# tarball for this module.
 use strict;
 use warnings;
 use PerlSpeak;
 use Net::MQTT::Simple::SSL;
 
+# Initialize PerlSpeak
 my $ps = PerlSpeak->new();
-
-# Set properties
 $ps->{tts_engine} = "festival"; # or cepstrel
 
+# Initialize MQTT
 my $mqtt = Net::MQTT::Simple::SSL->new("nyx.bjornhaug.net", {
     SSL_ca_file   => 'ca.crt'
 });
 
+# Listen to topic: paradise/notify/#
 $mqtt->run(
   "paradise/notify/#" => sub {
     my ($topic, $message) = @_;

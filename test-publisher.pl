@@ -6,4 +6,4 @@ my $mqtt = Net::MQTT::Simple::SSL->new("nyx.bjornhaug.net", {
 });
 
 # Publish a test message
-$mqtt->publish("paradise/notify/test" => "This is a test message");
+$mqtt->publish("paradise/notify/tts" => "This is a test message");
